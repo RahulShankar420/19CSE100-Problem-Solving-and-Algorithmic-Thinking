@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-28 09:44:08 AM"/>
+        <attribute name="created" value="QWRtaW47REVTS1RPUC1LRkRTMVA2OzIwMjItMTAtMjg7MDk6MDk6NDggQU07MjgyNw=="/>
+        <attribute name="edited" value="QWRtaW47REVTS1RPUC1LRkRTMVA2OzIwMjItMTAtMjg7MDk6NDQ6MDggQU07MjsyOTMx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Rollno" type="Integer" array="False" size=""/>
+            <declare name="Name" type="String" array="False" size=""/>
+            <declare name="Address" type="String" array="False" size=""/>
+            <declare name="Bloodgroup" type="String" array="False" size=""/>
+            <declare name="Phonenumber" type="String" array="False" size=""/>
+            <declare name="DeptAssigned" type="String" array="False" size=""/>
+            <output expression="&quot;Student_management_System&quot;" newline="True"/>
+            <output expression="&quot;Enter Your Name:&quot;" newline="True"/>
+            <input variable="Name"/>
+            <output expression="&quot;Enter Your Roll_no(22000):&quot;" newline="True"/>
+            <input variable="Rollno"/>
+            <output expression="&quot;Enter Your Address:&quot;" newline="True"/>
+            <input variable="Address"/>
+            <output expression="&quot;Enter Your Blood_group:&quot;" newline="True"/>
+            <input variable="Bloodgroup"/>
+            <output expression="&quot;Enter Your Phone_number:&quot;" newline="True"/>
+            <input variable="Phonenumber"/>
+            <output expression="&quot;Enter Your Department_assigned(CYS):&quot;" newline="True"/>
+            <input variable="DeptAssigned"/>
+            <output expression="&quot;Overview&quot;" newline="True"/>
+            <output expression="&quot;Roll_number:&quot;" newline="False"/>
+            <output expression="Rollno" newline="True"/>
+            <output expression="&quot;Name:&quot;" newline="False"/>
+            <output expression="Name" newline="True"/>
+            <output expression="&quot;Address:&quot;" newline="False"/>
+            <output expression="Address" newline="True"/>
+            <output expression="&quot;Blood_group:&quot;" newline="False"/>
+            <output expression="Bloodgroup" newline="True"/>
+            <output expression="&quot;Phone_number:&quot;" newline="False"/>
+            <output expression="Phonenumber" newline="True"/>
+            <output expression="&quot;Department_assigned:&quot;" newline="False"/>
+            <output expression="DeptAssigned" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

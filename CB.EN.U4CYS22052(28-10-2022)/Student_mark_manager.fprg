@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-28 10:09:27 AM"/>
+        <attribute name="created" value="QWRtaW47REVTS1RPUC1LRkRTMVA2OzIwMjItMTAtMjg7MDk6MDk6NDggQU07MjgyNw=="/>
+        <attribute name="edited" value="QWRtaW47REVTS1RPUC1LRkRTMVA2OzIwMjItMTAtMjg7MTA6MDk6MjcgQU07NjsyOTI5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Declration"/>
+            <declare name="Rollno" type="Integer" array="False" size=""/>
+            <declare name="Name" type="String" array="False" size=""/>
+            <declare name="SEM" type="Integer" array="False" size=""/>
+            <declare name="Subjectcode1" type="Integer" array="False" size=""/>
+            <declare name="subjectcode2" type="Integer" array="False" size=""/>
+            <declare name="subjectcode3" type="Integer" array="False" size=""/>
+            <declare name="Mark1" type="Integer" array="False" size=""/>
+            <declare name="Mark2" type="Integer" array="False" size=""/>
+            <declare name="Mark3" type="Integer" array="False" size=""/>
+            <comment text="Display"/>
+            <output expression="&quot;Student_mark_System&quot;" newline="True"/>
+            <output expression="&quot;Enter Your Name:&quot;" newline="True"/>
+            <input variable="Name"/>
+            <output expression="&quot;Enter Your Roll_no(22000):&quot;" newline="True"/>
+            <input variable="Rollno"/>
+            <output expression="&quot;Enter the Semester code:&quot;" newline="True"/>
+            <input variable="SEM"/>
+            <output expression="&quot;Enter the Subjects code1:&quot;" newline="True"/>
+            <input variable="Subjectcode1"/>
+            <output expression="&quot;Enter the Mark1:&quot;" newline="True"/>
+            <input variable="Mark1"/>
+            <output expression="&quot;Enter the Subjects code2:&quot;" newline="True"/>
+            <input variable="Subjectcode2"/>
+            <output expression="&quot;Enter the Mark2:&quot;" newline="True"/>
+            <input variable="Mark2"/>
+            <output expression="&quot;Enter the Subjects code3:&quot;" newline="True"/>
+            <input variable="Subjectcode3"/>
+            <output expression="&quot;Enter the Mark3:&quot;" newline="True"/>
+            <input variable="Mark3"/>
+            <comment text="Calculation"/>
+            <declare name="Total" type="Integer" array="False" size=""/>
+            <declare name="Average" type="Integer" array="False" size=""/>
+            <assign variable="Total" expression="Mark1+Mark2+Mark3"/>
+            <assign variable="Average" expression="Total/3"/>
+            <comment text="Result"/>
+            <output expression="&quot;Overview&quot;" newline="True"/>
+            <output expression="&quot;Roll_number:&quot;" newline="False"/>
+            <output expression="Rollno" newline="True"/>
+            <output expression="&quot;Name:&quot;" newline="False"/>
+            <output expression="Name" newline="True"/>
+            <output expression="&quot;Semester:&quot;" newline="False"/>
+            <output expression="SEM" newline="True"/>
+            <output expression="&quot;Total:&quot;" newline="False"/>
+            <output expression="Total" newline="True"/>
+            <output expression="&quot;Average:&quot;" newline="False"/>
+            <output expression="Average" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
