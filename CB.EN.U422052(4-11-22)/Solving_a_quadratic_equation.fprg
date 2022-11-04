@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22052"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:46:55 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA1MjsyMDIyMjNNQVlDMDA4OTsyMDIyLTExLTA0OzA5OjMwOjExIEFNOzMwNjA="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA1MjsyMDIyMjNNQVlDMDA4OTsyMDIyLTExLTA0OzEwOjQ2OjU1IEFNOzY7MzE4MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="To solve a quadratic equation"/>
+            <output expression="&quot;Quadratic_solver&quot;" newline="True"/>
+            <comment text="Declaration"/>
+            <declare name="Coeff1" type="Integer" array="False" size=""/>
+            <declare name="Coeff2" type="Integer" array="False" size=""/>
+            <declare name="Constant" type="Integer" array="False" size=""/>
+            <comment text="Input from user"/>
+            <output expression="&quot;Enter the coeffecient of First Variable:&quot;" newline="True"/>
+            <input variable="Coeff1"/>
+            <output expression="&quot;Enter the coeffecient of Second variable:&quot;" newline="True"/>
+            <input variable="Coeff2"/>
+            <output expression="&quot;Enter the value of the constant:&quot;" newline="True"/>
+            <input variable="Constant"/>
+            <comment text="Calculation"/>
+            <declare name="Root1" type="Real" array="False" size=""/>
+            <assign variable="Root1" expression="(-Coeff2+((coeff2^2)-4*Coeff1*Constant)^0.5)/2*Coeff1"/>
+            <declare name="Root2" type="Real" array="False" size=""/>
+            <assign variable="Root2" expression="(-Coeff2-((coeff2^2)-4*Coeff1*Constant)^0.5)/2*Coeff1"/>
+            <comment text="Output to user"/>
+            <output expression="&quot;The roots of the given equatioin are:&quot;" newline="True"/>
+            <output expression="Root1" newline="True"/>
+            <output expression="Root2" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

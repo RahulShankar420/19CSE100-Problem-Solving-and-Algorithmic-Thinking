@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22052"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:17:19 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA1MjsyMDIyMjNNQVlDMDA4OTsyMDIyLTExLTA0OzA5OjUyOjA0IEFNOzMwNjY="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA1MjsyMDIyMjNNQVlDMDA4OTsyMDIyLTExLTA0OzEwOjE3OjE5IEFNOzM7MzE3NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Swapping 2 numbers without using 3rd variable:&quot;" newline="True"/>
+            <comment text="Declaration"/>
+            <declare name="a" type="Integer" array="False" size=""/>
+            <declare name="b" type="Integer" array="False" size=""/>
+            <comment text="Input from user"/>
+            <output expression="&quot;Enter value1:&quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;Enter value2:&quot;" newline="True"/>
+            <input variable="b"/>
+            <comment text="Before swapping"/>
+            <output expression="&quot;The values initially,&quot;" newline="True"/>
+            <output expression="a" newline="True"/>
+            <output expression="b" newline="True"/>
+            <comment text="Swapping"/>
+            <assign variable="a" expression="a*b"/>
+            <assign variable="b" expression="a/b"/>
+            <assign variable="a" expression="a/b"/>
+            <comment text="After swappining print the value"/>
+            <output expression="&quot;The new values are:&quot;" newline="True"/>
+            <output expression="a" newline="True"/>
+            <output expression="b" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

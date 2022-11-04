@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22052"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 09:25:19 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA1MjsyMDIyMjNNQVlDMDA4OTsyMDIyLTExLTA0OzA5OjA2OjQ0IEFNOzMwNjk="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA1MjsyMDIyMjNNQVlDMDA4OTsyMDIyLTExLTA0OzA5OjI1OjE5IEFNOzQ7MzE4Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Temperature conversion from c to f ; f=9/5(c)+32"/>
+            <declare name="GivenTemperature" type="Integer" array="False" size=""/>
+            <declare name="ConvertedTemperature" type="Integer" array="False" size=""/>
+            <comment text="Input from User(in Celcius)"/>
+            <output expression="&quot;Enter The Temperature in celcius:&quot;" newline="True"/>
+            <input variable="GivenTemperature"/>
+            <comment text="Calculation"/>
+            <assign variable="ConvertedTemperature" expression="(9/5*(GivenTemperature))+32"/>
+            <comment text="Output to User(In Farenhiet)"/>
+            <output expression="&quot;The Temperature in celcius is:&quot;" newline="False"/>
+            <output expression="ConvertedTemperature" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

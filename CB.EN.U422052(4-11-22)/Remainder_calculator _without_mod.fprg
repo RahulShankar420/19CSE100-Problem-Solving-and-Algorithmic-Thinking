@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22052"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:45:31 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA1MjsyMDIyMjNNQVlDMDA4OTsyMDIyLTExLTA0OzEwOjA0OjI0IEFNOzMwNTc="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA1MjsyMDIyMjNNQVlDMDA4OTsyMDIyLTExLTA0OzEwOjQ1OjMxIEFNOzQ7MzE3MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Find the remainder of a division operation without using modulus operation"/>
+            <output expression="&quot;Modulus&quot;" newline="True"/>
+            <comment text="Declaration"/>
+            <declare name="Divisor" type="Integer" array="False" size=""/>
+            <declare name="Divident" type="Integer" array="False" size=""/>
+            <comment text="Input"/>
+            <output expression="&quot;Enter the divisor:&quot;" newline="True"/>
+            <input variable="Divisor"/>
+            <output expression="&quot;Enter the Divident:&quot;" newline="True"/>
+            <input variable="Divident"/>
+            <comment text="Calculation"/>
+            <declare name="quotient" type="Integer" array="False" size=""/>
+            <assign variable="quotient" expression="divident/divisor"/>
+            <declare name="Remainder" type="Integer" array="False" size=""/>
+            <assign variable="Remainder" expression="divident-(divisor*quotient)"/>
+            <comment text="Output"/>
+            <output expression="&quot;The remainder is:&quot;" newline="True"/>
+            <output expression="Remainder" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
