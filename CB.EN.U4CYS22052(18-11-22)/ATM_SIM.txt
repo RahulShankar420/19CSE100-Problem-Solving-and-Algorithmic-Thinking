@@ -1,0 +1,102 @@
+ALOGORITHM FOR ATM Sim:
+
+Declare Integer pIN ,String accountNumber,Integer balance
+
+Set balance = 1000
+
+Display "ATM_Sim"
+Display "Enter your account_number:"
+Input accountNumber
+Display "Enter your Pin:"
+Input pIN
+
+Declare Integer withdrawAmount
+
+Display "Enter amount to be withdrawn:"
+Input withdrawAmount
+
+If balance - withdrawAmount < 500 Then
+    Declare String ans
+    
+    Display "The amount requested will bring your balance below the minimum balance of 500. This may result in fines if not maintained above the minimum threshold. DO you still wish to proceed? y OR n"
+    Input ans
+    If ans == "y" Then
+        Declare Integer pIN2 
+        Display "Enter PIN:"
+        Input pIN2
+
+        If pIN == pIN2 Then
+            Display "Processing transaction"
+            Display "Please collect your amount"
+            Set balance = balance - withdrawAmount
+            Display "Remaining Balance =", balance
+		
+Declare Integer pIN
+Declare String accountNumber
+Declare Integer balance
+
+Set balance = 1000
+
+
+Display "ATM_Sim"
+Display "Enter your account_number:"
+Input accountNumber
+Display "Enter your Pin:"
+Input pIN
+
+
+Declare Integer withdrawAmount
+
+Display "Enter amount to be withdrawn:"
+Input withdrawAmount
+
+
+If balance - withdrawAmount < 500 Then
+    Declare String ans
+    
+    Display "The amount requested will bring your balance below the minimum balance of 500. This may result in fines if not maintained above the minimum threshold. DO you still wish to proceed? y OR n"
+    Input ans
+    If ans == "y" Then
+        Declare Integer pIN2
+        
+        Display "Enter PIN:"
+        Input pIN2
+        If pIN == pIN2 Then
+            Display "Processing transaction"
+            Display "Please collect your amount"
+            Set balance = balance - withdrawAmount
+            Display "Remaining Balance =" â€¦
+            Display balance
+        Else
+            Display "Wrong PIN number"
+        Display "Please ensure to maintain your Balance"
+
+Else
+    Declare Integer pIN2
+    
+    Display "Enter PIN:"
+    Input pIN2
+   
+    If pIN == pIN2 Then
+        Display "Processing transaction"
+        Display "Please collect your amount"
+        Set balance = balance - withdrawAmount
+        Display "Remaining Balance =" balance
+	  Display "Thank you for using"
+    Else
+        Display "Wrong PIN number"
+
+Else
+    Declare Integer pIN2
+    Display "Enter PIN:"
+    Input pIN2
+    If pIN == pIN2 Then
+        Display "Processing transaction"
+        Display "Please collect your amount"
+        Set balance = balance - withdrawAmount
+        Display "Remaining Balance =" â€¦
+        Display balance
+    Else
+        Display "Wrong PIN number"
+Display "Thank you for using"
+

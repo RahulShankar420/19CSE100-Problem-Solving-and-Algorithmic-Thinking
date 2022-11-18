@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22052"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-18 10:34:38 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjA1MjsyMDIyMjNNQVlDMDA4OTsyMDIyLTExLTE4OzA5OjAyOjU0IEFNOzMzMjc="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjA1MjsyMDIyMjNNQVlDMDA4OTsyMDIyLTExLTE4OzEwOjM0OjM4IEFNOzk7MzQ0Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Declaration of Initial variables "/>
+            <declare name="PIN" type="Integer" array="False" size=""/>
+            <declare name="AccountNumber" type="String" array="False" size=""/>
+            <declare name="Balance" type="Integer" array="False" size=""/>
+            <assign variable="Balance" expression="1000"/>
+            <comment text="Security check 1"/>
+            <output expression="&quot;ATM_Sim&quot;" newline="True"/>
+            <output expression="&quot;Enter your account_number:&quot;" newline="True"/>
+            <input variable="AccountNumber"/>
+            <output expression="&quot;Enter your Pin:&quot;" newline="True"/>
+            <input variable="PIN"/>
+            <comment text="Withdrawal amount"/>
+            <declare name="WithdrawAmount" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter amount to be withdrawn:&quot;" newline="True"/>
+            <input variable="WithdrawAmount"/>
+            <comment text="Check for Balance Threshold"/>
+            <if expression="(Balance-WithdrawAmount) &lt; 500">
+                <then>
+                    <comment text="User confimation"/>
+                    <declare name="Ans" type="String" array="False" size=""/>
+                    <output expression="&quot;The amount requested will bring your balance below the minimum balance of 500. This may result in fines if not maintained above the minimum threshold. DO you still wish to proceed? y OR n&quot;" newline="True"/>
+                    <input variable="Ans"/>
+                    <if expression="Ans == &quot;y&quot;">
+                        <then>
+                            <comment text="Security check 2"/>
+                            <declare name="PIN2" type="Integer" array="False" size=""/>
+                            <output expression="&quot;Enter PIN:&quot;" newline="True"/>
+                            <input variable="PIN2"/>
+                            <comment text="Verification of PIN"/>
+                            <if expression="PIN == PIN2">
+                                <then>
+                                    <output expression="&quot;Processing transaction&quot;" newline="True"/>
+                                    <output expression="&quot;Please collect your amount&quot;" newline="True"/>
+                                    <assign variable="Balance" expression="Balance-WithdrawAmount"/>
+                                    <output expression="&quot;Remaining Balance =&quot;" newline="False"/>
+                                    <output expression="Balance" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Wrong PIN number&quot;" newline="True"/>
+                                </else>
+                            </if>
+                            <output expression="&quot;Please ensure to maintain your Balance&quot;" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                </then>
+                <else>
+                    <comment text="Security check 2"/>
+                    <declare name="PIN2" type="Integer" array="False" size=""/>
+                    <output expression="&quot;Enter PIN:&quot;" newline="True"/>
+                    <input variable="PIN2"/>
+                    <comment text="Verification of PIN"/>
+                    <if expression="PIN == PIN2">
+                        <then>
+                            <output expression="&quot;Processing transaction&quot;" newline="True"/>
+                            <output expression="&quot;Please collect your amount&quot;" newline="True"/>
+                            <assign variable="Balance" expression="Balance-WithdrawAmount"/>
+                            <output expression="&quot;Remaining Balance =&quot;" newline="False"/>
+                            <output expression="Balance" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Wrong PIN number&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Thank you for using&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
