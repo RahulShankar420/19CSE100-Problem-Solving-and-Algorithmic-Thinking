@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22052"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 10:03:00 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjA1MjsyMDIyMjNNQVlDMDA4OTsyMDIyLTEyLTAyOzA5OjI3OjQzIEFNOzMzMjY="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjA1MjsyMDIyMjNNQVlDMDA4OTsyMDIyLTEyLTAyOzEwOjAzOjAwIEFNOzE1OzM0NjY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Addition table&quot;" newline="True"/>
+            <comment text="N + M = L"/>
+            <comment text="Initialising variables"/>
+            <declare name="Number" type="Integer" array="False" size=""/>
+            <declare name="Limit" type="Integer" array="False" size=""/>
+            <assign variable="Number" expression="1"/>
+            <assign variable="Limit" expression="10"/>
+            <comment text="Loop for the number N"/>
+            <while expression="Number&lt;=Limit">
+                <comment text="Loop For M"/>
+                <declare name="Counter" type="Integer" array="False" size=""/>
+                <assign variable="Counter" expression="1"/>
+                <output expression="&quot;Addition_Table of &quot;" newline="False"/>
+                <output expression="Number" newline="True"/>
+                <while expression="Counter&lt;=Limit">
+                    <output expression="Number" newline="False"/>
+                    <output expression="&quot; + &quot;" newline="False"/>
+                    <output expression="Counter" newline="False"/>
+                    <output expression="&quot; = &quot;" newline="False"/>
+                    <comment text="Value of L"/>
+                    <output expression="Number+Counter" newline="True"/>
+                    <comment text="Updating counter variable"/>
+                    <assign variable="Counter" expression="Counter+1"/>
+                </while>
+                <output expression="&quot; &quot;" newline="True"/>
+                <assign variable="Number" expression="Number+1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

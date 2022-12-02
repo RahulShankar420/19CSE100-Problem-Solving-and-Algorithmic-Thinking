@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22052"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 09:21:23 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjA1MjsyMDIyMjNNQVlDMDA4OTsyMDIyLTEyLTAyOzA5OjA1OjQyIEFNOzMzMjE="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjA1MjsyMDIyMjNNQVlDMDA4OTsyMDIyLTEyLTAyOzA5OjIxOjIzIEFNOzg7MzQzMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Initialisation of variables"/>
+            <declare name="number" type="Integer" array="False" size=""/>
+            <declare name="Sum" type="Integer" array="False" size=""/>
+            <assign variable="Sum" expression="0"/>
+            <comment text="User input"/>
+            <output expression="&quot;Sum of n numbers&quot;" newline="True"/>
+            <output expression="&quot;Enter the number of terms till which sum is to be found:&quot;" newline="True"/>
+            <input variable="number"/>
+            <comment text="Processing"/>
+            <while expression="number&gt;=1">
+                <comment text="Sum = n+ (n-1)+ (n-2)+..."/>
+                <assign variable="Sum" expression="Sum + number"/>
+                <assign variable="number" expression="number-1"/>
+            </while>
+            <comment text="Dispaly result"/>
+            <output expression="&quot;Sum =&quot;" newline="False"/>
+            <output expression="Sum" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

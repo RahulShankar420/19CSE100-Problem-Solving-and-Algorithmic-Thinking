@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22052"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 10:34:18 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjA1MjsyMDIyMjNNQVlDMDA4OTsyMDIyLTEyLTAyOzEwOjAzOjIyIEFNOzMzMDk="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjA1MjsyMDIyMjNNQVlDMDA4OTsyMDIyLTEyLTAyOzEwOjEzOjM3IEFNOzE7Y2IuZW4udTRjeXMyMjA1MjsyMDIyMjNNQVlDMDA4OTsyMDIyLTEyLTAyOzA5OjI3OjQzIEFNO0FkZGl0aW9uX3RhYmxlLmZwcmc7ODc3Mg=="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjA1MjsyMDIyMjNNQVlDMDA4OTsyMDIyLTEyLTAyOzEwOjM0OjE4IEFNOzE3OzM0ODE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="INITIALIZATION OF VARIABLE"/>
+            <declare name="f1" type="Integer" array="False" size=""/>
+            <assign variable="f1" expression="0"/>
+            <declare name="f2" type="Integer" array="False" size=""/>
+            <assign variable="f2" expression="1"/>
+            <declare name="Input" type="Integer" array="False" size=""/>
+            <output expression="&quot;FIBONACCI SEQUENCE&quot;" newline="True"/>
+            <comment text="Number of terms"/>
+            <output expression="&quot;Enter the number of terms required:&quot;" newline="True"/>
+            <input variable="Input"/>
+            <comment text="Initial values of f1 and f2"/>
+            <output expression="f1" newline="False"/>
+            <output expression="&quot; &quot;" newline="False"/>
+            <output expression="f2" newline="False"/>
+            <output expression="&quot; &quot;" newline="False"/>
+            <comment text="Calculations for terms after 0 and 1"/>
+            <declare name="Counter" type="Integer" array="False" size=""/>
+            <assign variable="Counter" expression="1"/>
+            <while expression="Counter&lt;=(Input-2)">
+                <output expression="f1+f2" newline="False"/>
+                <output expression="&quot; &quot;" newline="False"/>
+                <assign variable="f2" expression="f2+f1"/>
+                <assign variable="f1" expression="f2-f1"/>
+                <comment text="f1 = (f2+f1)-f1"/>
+                <assign variable="Counter" expression="Counter+1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
