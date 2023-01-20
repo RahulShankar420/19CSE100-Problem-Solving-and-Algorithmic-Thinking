@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22052"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-20 10:55:39 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA1MjsyMDIyMjNNQVlDMDA4OTsyMDIzLTAxLTIwOzEwOjM1OjUyIEFNOzMwNjA="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA1MjsyMDIyMjNNQVlDMDA4OTsyMDIzLTAxLTIwOzEwOjM2OjMyIEFNOzE7Q0IuRU4uVTRDWVMyMjA1MjsyMDIyMjNNQVlDMDA4OTsyMDIzLTAxLTIwOzA5OjQ5OjI5IEFNO0J1YmJsZV9zb3J0LmZwcmc7Nzk3OA=="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA1MjsyMDIyMjNNQVlDMDA4OTsyMDIzLTAxLTIwOzEwOjM3OjMxIEFNOzI7Q0IuRU4uVTRDWVMyMjA1MjsyMDIyMjNNQVlDMDA4OTsyMDIzLTAxLTIwOzA5OjAzOjUyIEFNO3NlbGVjdGlvbl9zb3J0LmZwcmc7ODM0Mw=="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA1MjsyMDIyMjNNQVlDMDA4OTsyMDIzLTAxLTIwOzEwOjU1OjM5IEFNOzEwOzMyMjM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Input for number of elements"/>
+            <declare name="N" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the number of terms:&quot;" newline="True"/>
+            <input variable="N"/>
+            <comment text="Declaration"/>
+            <declare name="Array" type="Integer" array="True" size="N"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="pos" type="Integer" array="False" size=""/>
+            <declare name="Found" type="String" array="False" size=""/>
+            <declare name="element" type="Integer" array="False" size=""/>
+            <comment text="Input for each array value"/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <output expression="&quot;Enter the value for &quot;&amp;i+1&amp;&quot;:&quot;" newline="True"/>
+                <input variable="Array[i]"/>
+            </for>
+            <comment text="Input for search element"/>
+            <output expression="&quot;Enter the required value to be searched:&quot;" newline="True"/>
+            <input variable="element"/>
+            <comment text="Searching"/>
+            <assign variable="Found" expression="&quot;N&quot;"/>
+            <assign variable="i" expression="0"/>
+            <while expression="i&lt;N &amp;&amp; Found == &quot;N&quot;">
+                <if expression="Array[i]==element">
+                    <then>
+                        <assign variable="pos" expression="i"/>
+                        <assign variable="Found" expression="&quot;Y&quot;"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="i" expression="i+1"/>
+            </while>
+            <comment text="Output"/>
+            <if expression="Found==&quot;Y&quot;">
+                <then>
+                    <output expression="&quot;Element found at &quot;&amp;pos&amp;&quot;&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Element not found&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

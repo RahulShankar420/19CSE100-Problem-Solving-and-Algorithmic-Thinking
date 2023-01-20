@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22052"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-20 10:27:59 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA1MjsyMDIyMjNNQVlDMDA4OTsyMDIzLTAxLTIwOzA5OjAzOjUyIEFNOzMwNjM="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA1MjsyMDIyMjNNQVlDMDA4OTsyMDIzLTAxLTIwOzEwOjI3OjU5IEFNOzEwOzMyMjQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Input"/>
+            <declare name="N" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the number of terms:&quot;" newline="True"/>
+            <input variable="N"/>
+            <comment text="Declaration"/>
+            <declare name="Array" type="Integer" array="True" size="N"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="temp" type="Integer" array="False" size=""/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <declare name="Min" type="Integer" array="False" size=""/>
+            <declare name="pos" type="Integer" array="False" size=""/>
+            <comment text="Input for array values"/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <output expression="&quot;Enter the value for &quot;&amp;i+1&amp;&quot;:&quot;" newline="True"/>
+                <input variable="Array[i]"/>
+            </for>
+            <comment text="Sorting"/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <comment text="Finding smallest number"/>
+                <assign variable="Min" expression="Array[i]"/>
+                <assign variable="pos" expression="i"/>
+                <for variable="j" start="i" end="N-1" direction="inc" step="1">
+                    <if expression="Min&gt;Array[j]">
+                        <then>
+                            <assign variable="Min" expression="Array[j]"/>
+                            <assign variable="pos" expression="j"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <comment text="Swapping"/>
+                <assign variable="Min" expression="Min+Array[i]"/>
+                <assign variable="Array[i]" expression="Min-Array[i]"/>
+                <assign variable="Min" expression="Min-Array[i]"/>
+                <assign variable="Array[pos]" expression="Min"/>
+            </for>
+            <comment text="Output"/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <output expression="Array[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

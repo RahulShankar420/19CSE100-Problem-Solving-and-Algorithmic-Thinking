@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22052"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-20 10:35:48 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA1MjsyMDIyMjNNQVlDMDA4OTsyMDIzLTAxLTIwOzA5OjQ5OjI5IEFNOzMwNzc="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA1MjsyMDIyMjNNQVlDMDA4OTsyMDIzLTAxLTIwOzEwOjExOjM5IEFNOzI7Q0IuRU4uVTRDWVMyMjA1MjsyMDIyMjNNQVlDMDA4OTsyMDIzLTAxLTIwOzA5OjAzOjUyIEFNO3NlbGVjdGlvbl9zb3J0LmZwcmc7ODM0Mw=="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA1MjsyMDIyMjNNQVlDMDA4OTsyMDIzLTAxLTIwOzEwOjM1OjQ4IEFNOzExOzMyMjI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="input for number of terms"/>
+            <declare name="N" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the number of terms:&quot;" newline="True"/>
+            <input variable="N"/>
+            <comment text="declaration"/>
+            <declare name="Array" type="Integer" array="True" size="N"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <declare name="End" type="Integer" array="False" size=""/>
+            <comment text="Input for array values"/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <output expression="&quot;Enter the value for &quot;&amp;i+1&amp;&quot;:&quot;" newline="True"/>
+                <input variable="Array[i]"/>
+            </for>
+            <comment text="Sorting"/>
+            <assign variable="j" expression="0"/>
+            <assign variable="End" expression="N-1"/>
+            <while expression="j&lt;End">
+                <assign variable="i" expression="0"/>
+                <comment text="Bubble sort"/>
+                <while expression="i&lt;End">
+                    <if expression="Array[i]&gt;Array[i+1]">
+                        <then>
+                            <assign variable="Array[i]" expression="Array[i]+Array[i+1]"/>
+                            <assign variable="Array[i+1]" expression="Array[i]-Array[i+1]"/>
+                            <assign variable="Array[i]" expression="Array[i]-Array[i+1]"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <assign variable="i" expression="i+1"/>
+                </while>
+                <assign variable="j" expression="j+1"/>
+            </while>
+            <comment text="Output"/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <output expression="Array[i]" newline="False"/>
+                <output expression="&quot; &quot;" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
