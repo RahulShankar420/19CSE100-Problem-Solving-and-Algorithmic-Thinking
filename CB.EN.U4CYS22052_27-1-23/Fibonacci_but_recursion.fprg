@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Admin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-27 08:27:54 PM"/>
+        <attribute name="created" value="QWRtaW47REVTS1RPUC1LRkRTMVA2OzIwMjMtMDEtMjc7MDg6MjM6NTYgUE07MjgzNg=="/>
+        <attribute name="edited" value="QWRtaW47REVTS1RPUC1LRkRTMVA2OzIwMjMtMDEtMjc7MDg6Mjc6MzYgUE07MTtBZG1pbjtERVNLVE9QLUtGRFMxUDY7MjAyMy0wMS0xODswNzoyODo0MiBQTTtGaWJvbmFjY2kuZnByZzs3Mjcw"/>
+        <attribute name="edited" value="QWRtaW47REVTS1RPUC1LRkRTMVA2OzIwMjMtMDEtMjc7MDg6Mjc6NTQgUE07NDsyOTQ5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the number of terms required:&quot;" newline="True"/>
+            <input variable="N"/>
+            <call expression="Fibo(N)"/>
+        </body>
+    </function>
+    <function name="Fibo" type="None" variable="">
+        <parameters>
+            <parameter name="N" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="f1" type="Integer" array="False" size=""/>
+            <declare name="f2" type="Integer" array="False" size=""/>
+            <declare name="fib" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="f1" expression="0"/>
+            <output expression="f1" newline="False"/>
+            <assign variable="f2" expression="1"/>
+            <output expression="f2" newline="False"/>
+            <assign variable="i" expression="1"/>
+            <while expression="i&lt;N-1">
+                <assign variable="fib" expression="f1+f2"/>
+                <output expression="fib" newline="False"/>
+                <assign variable="f1" expression="f2"/>
+                <assign variable="f2" expression="fib"/>
+                <assign variable="i" expression="i+1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
